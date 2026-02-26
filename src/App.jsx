@@ -2,31 +2,46 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import GameSquare from './components/GameSquare'
 
 const TURNS = {
   X: 'x',
   O: 'o'
 }
 
-const board = Array(9).fill(null)
-
 function App() {
+
+  const board = Array(9).fill(null)
+
+  const [turn, setTurn] = useState(TURNS.X)
+
+  const turnSquareStyle="grid w-17.5 h-17.5 border-2 rounded-[5px] border-solid border-transparent place-items-center pointer-events-none text-5xl"
+
+  const updateBoard =() => {
+
+  }
 
   return (
     <main className='w-fit my-10 mx-auto text-center'>
-      <h1 className='mb-4'>Tic Tac Toe</h1>
+      <h1 className='mb-4'>Placeholder</h1>
       <section className='grid grid-cols-3 gap-2.5'>
         {
           board.map((_, index) => {
             return (
-              <div key={index}>
-                <span>
-                  {index}
-                </span>
-              </div>
+              <GameSquare
+              key={index}
+              index={index}
+              updateBoard={updateBoard}
+              >
+              </GameSquare>
             )
           })
         }
+      </section>
+
+      <section className="flex justify-center w-fit my-3.75 mx-auto relative rounded-[10px]">
+        <GameSquare squareStyle={turnSquareStyle} isSelected={turn === TURNS.X}>{TURNS.X}</GameSquare>
+        <GameSquare squareStyle={turnSquareStyle} isSelected={turn === TURNS.O}>{TURNS.O}</GameSquare>
       </section>
     </main>
   )
