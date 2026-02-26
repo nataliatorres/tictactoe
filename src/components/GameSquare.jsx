@@ -1,7 +1,7 @@
 const GameSquare = ({children, squareStyle, isSelected, updateBoard, index}) => {
 
 const handleClick = () => {
-    updateBoard()
+    updateBoard(index)
 }
 
     return (
