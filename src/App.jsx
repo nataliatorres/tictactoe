@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import GameSquare from './components/GameSquare'
 import confetti from 'canvas-confetti'
-import { TURNS, WINNER_COMBOS } from './utils/constants'
+import { TURNS } from './utils/constants'
+import { checkWinnerFrom } from './logic/board'
 
 function App() {
   const turnSquareStyle = "grid w-17.5 h-17.5 border-2 rounded-[5px] border-solid border-transparent place-items-center pointer-events-none text-5xl"
@@ -16,18 +17,6 @@ function App() {
   const [turn, setTurn] = useState(TURNS.X)
   const [winner, setWinner] = useState(null)
 
-  const checkWinner = (boardToCheck) => {
-    for (const combo of WINNER_COMBOS) {
-      const [a, b, c] = combo
-      if (
-        boardToCheck[a] && boardToCheck[a] === boardToCheck[b] && boardToCheck[a] === boardToCheck [c]
-      ) {
-        return boardToCheck[a]
-      }
-    }
-    return null
-}
-
   const updateBoard = (index) => {
     if(board[index] || winner) return
 
@@ -38,7 +27,7 @@ function App() {
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn)
 
-    const newWinner = checkWinner(newBoard)
+    const newWinner = checkWinnerFrom(newBoard)
     if (newWinner) {
       confetti()
       setWinner(newWinner)
