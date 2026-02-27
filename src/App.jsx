@@ -4,22 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import GameSquare from './components/GameSquare'
 import confetti from 'canvas-confetti'
-
-const TURNS = {
-  X: '❌',
-  O: '⚪'
-}
-
-const WINNER_COMBOS = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6]
-]
+import { TURNS, WINNER_COMBOS } from './utils/constants'
 
 function App() {
   const turnSquareStyle = "grid w-17.5 h-17.5 border-2 rounded-[5px] border-solid border-transparent place-items-center pointer-events-none text-5xl"
