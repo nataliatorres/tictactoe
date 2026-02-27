@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import GameSquare from './components/GameSquare'
+import confetti from 'canvas-confetti'
 
 const TURNS = {
   X: '❌',
@@ -54,6 +55,7 @@ function App() {
 
     const newWinner = checkWinner(newBoard)
     if (newWinner) {
+      confetti()
       setWinner(newWinner)
     } else if (checkEndGame(newBoard)) {
       setWinner(false)
@@ -77,14 +79,15 @@ function App() {
 
       <section className='grid grid-cols-3 gap-2.5'>
         {
-          board.map((_, index) => {
+          // board.map((_, index) => {
+          board.map((square, index) => {
             return (
               <GameSquare
               key={index}
               index={index}
               updateBoard={updateBoard}
               >
-              {board[index]}
+              {square}
               </GameSquare>
             )
           })
