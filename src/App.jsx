@@ -78,7 +78,7 @@ function App() {
         <GameSquare squareStyle={turnSquareStyle} isSelected={turn === TURNS.X}>{TURNS.X}</GameSquare>
         <GameSquare squareStyle={turnSquareStyle} isSelected={turn === TURNS.O}>{TURNS.O}</GameSquare>
       </section>
-      <button onClick={resetGame} className='w-40 py-2 px-3 m-3 bg-[#4f5030] font-bold text-xl text-[#dfd3bd] border-2 border-solid border-[#4f5030] rounded-lg transition-200 cursor-pointer hover:bg-[#dfd3bd] hover:text-[#222]'>Reset game</button>
+      <button onClick={resetGame} className='w-40 py-2 px-3 m-3 bg-[#4f5030] font-bold text-xl text-[#dfd3bd] border-2 border-solid border-[#4f5030] rounded-lg transition-200 cursor-pointer hover:bg-[#dfd3bd] hover:text-[#4f5030]'>Reset game</button>
       
       <WinnerModal winner={winner} resetGame={resetGame}></WinnerModal>
     </main>

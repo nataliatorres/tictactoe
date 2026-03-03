@@ -18,7 +18,7 @@ export function WinnerModal ({winner, resetGame}) {
             </header>
 
             <footer>
-                <button onClick={resetGame} className='w-35 py-2 px-3 m-6 bg-[#4f5030] font-bold text-lg text-[#dfd3bd] border-2 border-solid border-[#4f5030] rounded-lg transition-200  cursor-pointer hover:bg-[#dfd3bd] hover:text-[#222]'>Play again</button>
+                <button onClick={resetGame} className='w-35 py-2 px-3 m-6 bg-[#4f5030] font-bold text-lg text-[#dfd3bd] border-2 border-solid border-[#4f5030] rounded-lg transition-200  cursor-pointer hover:bg-[#dfd3bd] hover:text-[#4f5030]'>Play again</button>
             </footer>
             </div>
         </section>
