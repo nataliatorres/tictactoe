@@ -24,8 +24,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -44,4 +42,12 @@ h2 {
 
 button {
   font-family: "Source Sans 3", sans-serif;
+}
+
+a {
+  font-family: "Source Sans 3", sans-serif;
+  color: #CA9248;
+}
+a:hover {
+  color: #DFD3BD;
 }
