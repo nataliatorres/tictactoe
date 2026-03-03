@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-A classic built with **React**, **Vue**, and **Tailwind CSS**.  
+A classic built with **React**, **Vite**, and **Tailwind CSS**.
 
 ---
 
@@ -12,20 +12,20 @@ A classic built with **React**, **Vue**, and **Tailwind CSS**.
 
 ## Features
 
-- Two-player gameplay (X and O)  
-- Highlights the current turn  
-- Detects the winner or draw  
-- Reset game functionality  
+- Two-player gameplay (X and O)
+- Highlights the current turn
+- Reset game functionality
+- Detects the winner or draw
+- Confetti celebration on win
 
 ---
 
-## Technologies Used
+## Tech Stack
 
-- **React** – state management and game logic  
-- **Vue** – optional UI components (if used)  
-- **Tailwind CSS** – styling  
-- **JavaScript** – game logic  
-- **Canvas-confetti** – celebratory effect when someone wins  
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
 ---
 
