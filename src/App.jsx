@@ -56,9 +56,7 @@ function App() {
 
   return (
     <main className='w-fit my-10 mx-auto text-center'>
-      <h1>Tic Tac Toe</h1>
-      <button onClick={resetGame} className='w-25 py-2 px-3 m-6 bg-transparent text-gray-200 border-2 border-solid border-gray-200 rounded-lg transition-200 font-bold cursor-pointer hover:bg-[#eee] hover:text-[#222]'>Reset game</button>
-
+      <h1 className='my-5'>Tic Tac Toe</h1>
       <section className='grid grid-cols-3 gap-2.5'>
         {
           // board.map((_, index) => {
@@ -80,6 +78,7 @@ function App() {
         <GameSquare squareStyle={turnSquareStyle} isSelected={turn === TURNS.X}>{TURNS.X}</GameSquare>
         <GameSquare squareStyle={turnSquareStyle} isSelected={turn === TURNS.O}>{TURNS.O}</GameSquare>
       </section>
+      <button onClick={resetGame} className='w-40 py-2 px-3 m-3 bg-transparent font-bold text-xl text-gray-200 border-2 border-solid border-gray-200 rounded-lg transition-200 cursor-pointer hover:bg-[#eee] hover:text-[#222]'>Reset game</button>
       
       <WinnerModal winner={winner} resetGame={resetGame}></WinnerModal>
     </main>
